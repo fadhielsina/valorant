@@ -1,0 +1,14 @@
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+
+const app = createApp(App)
+
+router.beforeEach((to, from, next) => {
+  const defaultTitle = 'Valorant'
+  document.title = to.meta.title || defaultTitle
+  next()
+})
+
+app.use(router)
+app.mount('#app')

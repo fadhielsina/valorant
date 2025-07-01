@@ -1,0 +1,1196 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@200;300;400;500;600;700&family=Work+Sans:wght@200;300;400;500;600;700&display=swap');
+*{
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background:#ECE8E2 ;
+    color:#0F1923;
+}
+
+  /*        */
+ /*  HOME  */
+/*        */
+.home{
+    height:100vh;
+    z-index:99;
+}
+
+.back-text{
+    position: absolute;
+    width:100%;
+    top:0;
+    left:0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-text .text-wrapper{
+    width:75%;
+}
+
+.back-text span{
+    font-family: 'Anton', sans-serif;
+    font-size: 20em;
+    color:rgba(255, 255, 255, 0);
+    -webkit-text-stroke: 0.8px #CFCFCF;
+    letter-spacing: 12px;
+}
+
+.back-text .we{
+    display: block;
+}
+.back-text .valorant{
+    padding-left: 10%;
+}
+
+.maps h1, .agents h1, .weapons h1{
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.maps, .agents, .weapons{
+    height:100vh;
+    border-right:0.5px solid #707070;
+    z-index:0;
+    position: relative;
+    overflow: hidden;
+    transition: 0.6s ease-in;
+    cursor: pointer;
+}
+
+.maps::before, .agents::before, .weapons::before{
+    content:"";
+    position: absolute;
+    z-index: -1;
+    left:-25px;
+    background: #FF445A;
+    height:100vh;
+    width: 25px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.2s ease-out;
+}
+
+.maps:hover::before, .agents:hover::before, .weapons:hover::before{
+    transition-delay:0.1s ;
+
+  transform: scale(100);
+}
+
+.maps .content-wrapper{
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.maps .header-text, .agents .header-text, .weapons .header-text{
+    flex-basis: 20%;
+}
+
+.maps .image-wrapper, .agents .image-wrapper, .weapons .image-wrapper {
+    flex-basis:80%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    
+}
+
+.maps .content-wrapper img{
+    width:100%;
+    align-self: end;
+}
+
+
+
+.maps:hover h1, .agents:hover h1, .weapons:hover h1{
+    color:white;
+}
+
+.maps .right-red-square{
+    position: relative;
+}
+.maps .square-1 , .maps .square-2 {
+    position: absolute;
+    right:0;
+    top:0;
+    margin-top: 6%;
+    width:8px;
+    height:8px;
+    background: #FF445A;
+
+}
+
+.maps:hover .square-1 , .maps:hover .square-2 {
+    background: white;
+}
+
+.maps .square-2{
+    margin-top:40%;
+}
+
+.maps .defy{
+position: relative;
+}
+
+.maps .defy span{
+    transform: rotate(90deg);
+    position: absolute;
+    right:0;
+    color:#8A9195;
+    margin-right: 20px;
+    font-size: 12px;
+    margin-top:50%;
+}
+
+.maps:hover .defy span{
+    color:white;
+}
+
+.maps .left-line-wrapper{
+    position: relative;
+}
+
+.line-grey{
+    position: absolute;
+    width:40%;
+    height:0.1px;
+    background: #70707044;
+    top:0;
+    left:0;
+    margin-top:34% ;
+    margin-left: 20%;
+}
+
+.line-red{
+    position: absolute;
+    width:30%;
+    height:2px;
+    background: #FF445A;
+    top:0;
+    left:0;
+    margin-top:44% ;
+    margin-left: 26%;
+}
+
+.maps:hover .line-red, .maps:hover .line-grey{
+    background: white;
+}
+
+
+
+.agents .content-wrapper img, .weapons .content-wrapper img{
+    width:100%;
+    align-self: center;
+}
+
+.agents .content-wrapper, .weapons .content-wrapper{
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.agents .image-wrapper, .weapons .image-wrapper{
+    padding-bottom: 50px;
+}
+
+.agents .particles-agents{
+    position: relative;
+
+}
+
+.agents .particles-agents img{
+    position: absolute;
+    left:20px;
+    top:20px;
+}
+
+.agents:hover img.grey{
+    visibility: hidden;
+}
+
+.agents .particles-agents .text-red{
+    width:110px;
+    position: absolute;
+    color:#FF445A;
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    font-size: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #FF445A;
+    font-weight: 600;
+    right:25px;
+    margin-top:47%;
+}
+
+.agents:hover .particles-agents .text-red{
+    color:white;
+    border-bottom:1px solid white;
+}
+
+.agents .grey-square-wrapper{
+    position: relative;
+}
+
+.agents .grey-square-wrapper .square-1, .agents .grey-square-wrapper .square-2{
+    position: absolute;
+    width:8px;
+    height:8px;
+    background:#8A9195;
+    left:0;
+    margin-top: 48%;
+}
+
+.agents .grey-square-wrapper .square-1{
+    margin-left: 10%;
+}
+
+.agents .grey-square-wrapper .square-2{
+    margin-left: 40%;
+}
+
+.agents .grey-square-wrapper .square-3{
+    position: absolute;
+    width:8px;
+    height:8px;
+    background:#FF445A;
+    top:0;
+}
+
+.agents:hover .square-1, .agents:hover .square-2, .agents:hover .square-3{
+    background: white;
+}
+
+.weapons .content-wrapper{
+    z-index: 99;
+}
+
+.weapons .particles-weapons{
+    width:100%;
+    height:100vh;
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.weapons .top-particles{
+    padding:6%;
+    flex-basis:15%;
+}
+
+.weapons .top-particles .square-1{
+    width:10px;
+    height:10px;
+    background: #8A9195;
+    margin-bottom: 4px;
+}
+.weapons .top-particles .square-2, .weapons .top-particles .square-3{
+    width:4px;
+    height:4px;
+    background: #8A9195;
+    margin-bottom: 4px;
+}
+
+.weapons .mid-particles{
+    flex-basis:15%;
+    display: flex;
+    justify-content: end;
+}
+
+.weapons .mid-particles .square-1, .weapons .mid-particles .square-2{
+    width:6px;
+    height: 6px;
+    background:#8A9195;
+    margin-right: 5px;
+}
+
+.weapons .mid-particles .line{
+    width:1px;
+    height:50px;
+    background:#8A9195;
+    margin-right: 20px;
+}
+
+.weapons .bottom-particles{
+    flex-basis:70%;
+    position: relative;
+    display: flex;
+}
+
+.weapons .bottom-particles .square-1, .weapons .bottom-particles .square-2{
+    margin-left:60px ;
+    width:8px;
+    height: 8px;
+    background: #FF445A;
+}
+
+.weapons .bottom-particles .square-2{
+    margin-left: 80px;
+}
+
+.weapons .bottom-particles img{
+    width:70%;
+    position: absolute;
+    right: 0;
+    top:0;
+    margin-right: 5%;
+    margin-top: 10%;
+}
+
+.weapons:hover .bottom-particles img.grey{
+    visibility: hidden;
+}
+
+.weapons:hover .bottom-particles .square-1, .weapons:hover .bottom-particles .square-2,
+.weapons:hover .mid-particles .line,
+.weapons:hover .mid-particles .square-1, .weapons:hover .mid-particles .square-2,
+.weapons:hover .top-particles .square-2, .weapons:hover .top-particles .square-3,
+.weapons:hover .top-particles .square-1{
+    background: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) and (min-width:100px){
+    .agents, .weapons{
+        height:50vh;
+        border-bottom: 1px solid grey;
+    }
+    .agents .content-wrapper, .weapons .content-wrapper{
+        height:50vh;
+    }
+
+    .agents .header-text h1, .weapons .header-text h1{
+        flex-basis:10%;
+        font-size: 35px;
+    }
+
+    .agents .image-wrapper{
+        flex-basis: 90%;
+    }
+
+    .agents .content-wrapper img, .weapons .content-wrapper img{
+        width:60%;
+    }
+}
+
+
+  /*        */
+ /*AGENTS  */
+/*        */
+
+#agents{
+    
+    background-image: url('../assets/images/valorant-bg-dark.jpg');
+    width: 100%;
+    height:100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+}
+
+nav-bar{
+    background: #1C252E;
+    width:100%;
+    height:60px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+nav-bar ul{
+    list-style: none;
+    
+    padding:0;
+    margin: 0;
+    font-size: 20px;
+}
+
+nav-bar li{
+    display: inline;
+    margin-right: 20px;
+    font-family: 'Anton', sans-serif;
+    cursor: pointer;
+    letter-spacing: 1px;
+    color:white;
+    letter-spacing: 1px;
+}
+
+nav-bar li:hover{
+    color: #FF445A;
+}
+
+nav-bar li.active{
+    color:#FF445A;
+}
+
+#agents .agents-info{
+    padding-top: 75px;
+    height:70%;
+}
+
+.agents-info .agents-bio{
+    color:white;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.agents-bio .name{
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    font-weight: medium;
+    letter-spacing: 1.3px;
+}
+
+.agents-bio .type{
+    font-size: 20px;
+    font-weight: medium;
+    letter-spacing: 1.3px;
+}
+
+.agents-bio .role{
+    letter-spacing: 3px;
+    font-size:25px;
+}
+
+.agents-bio .role img{
+    width:30px;
+}
+
+.role span{
+    font-family: 'Anton', sans-serif;
+}
+
+.agents-info .header-bio{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex-basis:40%;
+    margin-bottom: 10px;
+}
+
+.agents-info .biography-wrapper{
+    flex-basis: 60%;
+}
+
+.agents-info .biography{
+    width:100%;
+    overflow-y: auto;
+}
+
+.agents-info .biography::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+}
+
+.agents-info .biography::-webkit-scrollbar
+{
+	width: 3px;
+}
+
+.agents-info .biography::-webkit-scrollbar-thumb
+{
+	border-radius: 25px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #FF445A;
+}
+
+
+
+span.header{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.biography .text{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.agents-info .agents-skills{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content:center;
+    align-content: start;
+}
+
+.agents-info .agents-portrait{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    height:100%;
+}
+
+.agents-info .agents-portrait img{
+    height:100%;
+    /* background-color: red; */
+    /* width:350px; */
+    /* height:30%; */
+}
+
+.agents-info .icon-skills{
+    /* background: salmon; */
+    display: flex;
+    flex-basis:40%;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.agents-info .icon-skills span{
+    font-size: 40px;
+    color:white;
+    font-family: 'Anton', sans-serif;
+}
+
+.agents-info .icon img{
+    /* margin-top: 10px; */
+    width:100%;
+    height: 100%;
+    padding:10px;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.agents-info .icon .icon-wrapper.active{
+    border:1px solid #FF445A;
+    background: #FF445A;
+}
+
+.agents-info .icon{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.agents-info .icon .icon-wrapper{
+    position: relative;
+    border:1px solid #A5A5A5;
+    width:18%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.agents-info .icon .icon-wrapper.passive{
+    color:white;
+    display: flex;
+    font-size: 10px;
+    text-align: center;
+}
+
+.agents-info .icon .icon-wrapper.passive p{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 99;
+}
+
+
+.agents-info .icon .icon-wrapper img{
+    position: relative;
+}
+
+/* .agents-info .icon .icon-wrapper img{
+    z-index: 2;
+} */
+
+.agents-info .icon .icon-wrapper::before{
+    content:"";
+    position: absolute;
+    width:0px;
+    height:100%;
+    /* margin-top: 10px; */
+    /* left:-75px; */
+    bottom: 0;
+    background-color: #FF445A;
+    
+    transition: width 0.07s ease-out;
+    z-index: 0;
+}
+
+.agents-info .icon .icon-wrapper:hover::before{
+    width:100%;
+    transition-delay:0.1s ;
+}
+
+.agents-skills .description-skills{
+    margin-top: 5px;
+    color:white;
+    flex-basis:60%;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-content: start;
+    padding-bottom: 20px;
+    overflow-y: hidden;
+}
+
+.description-skills .description {
+    font-size: 16px;
+    font-weight: 200;
+    overflow-y: auto;
+    height:10px;
+    padding-right: 10px;
+    flex-basis: 80% !important;
+    align-content: start;
+}
+
+
+
+
+.description-skills .description::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+}
+
+.description-skills .description::-webkit-scrollbar
+{
+	width: 3px;
+}
+
+.description-skills .description::-webkit-scrollbar-thumb
+{
+	border-radius: 25px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #FF445A;
+}
+
+.agents-skills h3{
+    font-size: 25px;
+}
+
+#agents select-agents{
+    width:100%;
+    height:30%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+select-agents .overlay-bg{
+    width:100%;
+    height:85%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* padding:20px 50px 20px 50px; */
+}
+
+.overlay-bg .char-row{
+    margin-left: auto;
+    margin-right: auto;
+    width:70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.char-row .char-col{
+    position: relative;
+    width: 10%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.char-col img.active{
+    border:0.5px solid #E74C5B;
+}
+
+.char-col img{
+    background: #131B24;
+    border: 1px solid transparent;
+    width:90%;
+}
+
+.char-col img:hover{
+    border:0.5px solid #E74C5B;
+}
+
+@media screen and (max-width:768px) and (min-width:100px){
+    #agents{
+        height:auto;
+    }
+
+    .agents-info{
+        height:auto !important;
+    }
+
+    .agents-skills{
+        height:500px !important;
+        padding-bottom: 100px;
+    }
+
+    select-agents .character-select{
+        display: flex;
+        align-items: center;
+        height:100px !important;
+        background: rgb(0,0,0);
+        background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.27494747899159666) 100%);
+        position:fixed;
+        bottom:20px;
+        width:100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .character-select .char-row{
+        width:100%;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap;
+        padding:0;
+    }
+
+    .char-row .char-col{
+        display: inline-block;
+        width:70px;
+        margin: 0;
+    }
+
+    .agents-info .agents-portrait{
+        height:500px;
+        overflow: hidden;
+    }
+
+
+}
+
+
+  /*        */
+ /* WEAPONS*/
+/*        */
+
+.weapons-list{
+    border-left:0.3px solid #4b4b4b2f;
+    height:auto;
+    padding-top: 60px;
+    padding-left: 0px;
+}
+
+.weapon-category .text-header{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    border-bottom:0.3px solid #4b4b4b2f ;
+}
+
+.text-header h1, .weapon-name h2{
+    font-family: 'Anton', sans-serif;
+}
+
+.text-header h1{
+    margin:0;
+    padding:0;
+}
+
+.weapon-row{
+    margin:0;
+    height:auto;
+    /* padding:0; */
+}
+
+.weapon-col{
+    overflow: hidden;
+    padding:0;
+    display: flex;
+    height:350px;
+    flex-direction: column;
+    justify-content: space-around;
+    border-right:0.3px solid #4b4b4b2f ;
+    border-bottom:0.3px solid #4b4b4b2f;
+    position: relative;
+}
+
+.weapon-name, .weapon-desc{
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.weapon-image{
+    flex-basis: 40%;
+    display: flex;
+    
+    justify-content: center;
+}
+
+.weapon-image img{
+    width:85%;
+    align-self: center;
+}
+
+.weapon-image img.pistols{
+    width:40%;
+}
+
+.weapon-hover{
+    padding-left:20px;
+    padding-right: 20px;
+    position: absolute;
+    color:white;
+    left:-100%;
+    background:#ff445af1 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:100%;
+    height:100%;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.weapon-col:hover .weapon-hover{
+    left:0;
+}
+
+.weapon-hover .weapon-hover-name{
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+}
+
+.weapon-col:hover .weapon-name, .weapon-col:hover .weapon-desc{
+    opacity: 0;
+}
+
+.weapon-hover .weapon-hover-desc{
+    width:70%;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.weapon-hover-button{
+    display: flex;
+    justify-content:space-between
+
+}
+
+.btn-details, .btn-compare{
+    width:48%;
+    height:50px;
+    border:1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-details:hover, .btn-compare:hover{
+    background: white;
+    color:#ff445af1;
+}
+
+@media screen and (max-width:768px) and (min-width:100px){
+.weapons-list{
+    padding-left:0;
+    padding-right: 0;
+}
+
+.weapon-image{
+    flex-basis: 0;
+}
+
+.weapon-image img{
+    width:90%;
+}
+}
+
+/* WEAPON DETAILS */
+
+#weapon-details{
+    height:auto;
+    color:white;
+}
+
+.background-details{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+.details .left-item img{
+    width:95%;
+}
+
+.details .left-item img.pistols{
+    width:55%;
+}
+
+.details .left-item, .details .right-item{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.details .right-item{
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-top: 75px;
+}
+
+.left-item span.details-name{
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1.4px;
+}
+
+.left-item span.details-category{
+    font-size: 23px;
+    font-weight: 300;
+}
+
+.left-item p.details-desc{
+    width:80%;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.left-item .btn-details-compare{
+    padding:10px;
+    border:0.1px solid white;
+    color:white;
+    width:25%;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.left-item .btn-details-compare:hover{
+    background: #FF445A;
+}
+
+.right-item .stat-title{
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.right-item .details-stats{
+    width:80%;
+}
+
+.details-stats label, .details-compare{
+    font-size: 17px;
+    font-weight: 200;
+}
+
+.details-compare{
+    min-height: 100vh;
+    padding-top: 75px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.details-compare .compare-title{
+    flex-basis: 10%;
+    display: flex;
+    width: 100%;
+}
+
+.compare-title span{
+    font-size: 25px;
+    font-weight:500;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.details-compare .compare{
+    flex-basis:90%;
+}
+
+.compare .item-compare{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+
+.item-compare h2{
+    border:1px solid white;
+    padding:15px 40px ;
+}
+
+.item-compare img{
+    height:80px;
+}
+
+
+.item-compare span.stat-title{
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.item-compare .details-stats-compare{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-item-compare span.left-weapon-name{
+    font-size: 20px;
+    font-weight: 400;
+    width:75%;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.right-item-compare .control-group{
+  width:40%;
+  margin-bottom: 20px;
+}
+
+.item-compare-selected{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.control-group .selectize-input, .selectize-control.single .selectize-input.input-active{
+    background: none !important;
+}
+
+.selectize-input{
+    letter-spacing: 2px;
+    font-weight: 400 !important;
+    padding:10px !important;
+    color:white !important;
+    border-radius: 0 !important;
+    font-size: 20px !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.selectize-input input{
+    color:white !important;
+}
+
+.selectize-dropdown-content .optgroup .optgroup-header{
+    font-weight: bold;
+}
+
+.details-stats-compare .stat{
+    width:70%;
+    position: relative;
+}
+
+.details-stats-compare .stat.opacity{
+ opacity: 0.2;
+}
+
+.details-stats-compare meter {
+    /* The gray background in Firefox */
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    border-radius: 0px !important;
+}
+
+
+meter {
+    /* The gray background in Firefox */
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+    border-radius: 0px !important;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+  
+  meter::-webkit-meter-optimum-value {
+    background: #FF445A;
+    border-radius: 0px;
+  }
+  
+meter::-webkit-meter-bar{
+    border-radius: 0px;
+    border:0 solid white;
+}
+
+@media screen and (max-width:768px) and (min-width:100px){
+    .details .left-item, .details .right-item{
+        height:auto;
+    }
+
+    .details .left-item{
+        padding-top: 75px;
+    }
+
+    .left-item .btn-details-compare{
+        width:30%;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .details .right-item{
+        padding-top: 25px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .right-item .details-stats{
+        width:90%;
+    }
+
+    .compare{
+        flex-direction: column-reverse;
+    }
+
+    .item-compare img{
+        width:80%;
+        height: auto;
+    }
+
+    .details-stats-compare .stat{
+        width:90%;
+    }
+}
